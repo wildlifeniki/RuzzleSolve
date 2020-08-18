@@ -12,10 +12,12 @@ public class ScoredTrie {
 	
 	public ArrayList<String> getSortedWords() {
 		this.root = new Node();
+		
 		//fill tree
 		for (String s: words) {
 			root.insert(s);
 		}
+		
 		//empty tree
 		ArrayList<String> bestWords = new ArrayList<String>();
 		root.getBestWords("", bestWords);
